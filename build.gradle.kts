@@ -1,6 +1,8 @@
 plugins {
     kotlin("jvm") version "1.8.0"
-    application
+    // for jitpack
+    `java-library` // java
+    `maven-publish`
 }
 
 group = "com.corlaez"
@@ -22,6 +24,10 @@ kotlin {
     jvmToolchain(8)
 }
 
-application {
-    mainClass.set("MainKt")
+publishing {
+    publications {
+        create<MavenPublication>("web-libk") {
+            from(components["java"])
+        }
+    }
 }

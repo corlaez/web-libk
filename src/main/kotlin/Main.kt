@@ -1,7 +1,5 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+private class Private
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
-}
+internal class Internal
+
+public class Public
