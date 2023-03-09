@@ -1,0 +1,42 @@
+# Console output of detekt is enough for me
+output-reports:
+  active: true
+  exclude:
+   - 'TxtOutputReport'
+   - 'XmlOutputReport'
+   - 'HtmlOutputReport'
+   - 'MdOutputReport'
+
+empty-blocks:
+  EmptyFunctionBlock:
+    active: true
+    ignoreOverridden: true
+
+# I like to be free to name constants and enum values however I want
+naming:
+  EnumNaming:
+    active: false
+  TopLevelPropertyNaming:
+    active: false
+
+style:
+  ForbiddenComment:
+    active: true
+    values:
+      - 'FIXME:'
+      - 'STOPSHIP:'
+  ForbiddenMethodCall:
+    active: true
+    methods:
+      - 'kotlin.io.print'
+      - 'kotlin.io.println'
+  MagicNumber:
+    active: false
+  UnusedImports:
+    active: true
+  WildcardImport:
+    active: true
+    excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
+    excludeImports:
+      - 'java.util.*'
+      - 'kotlinx.html.*'

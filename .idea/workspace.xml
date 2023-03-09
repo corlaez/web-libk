@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb41b9af-08b0-49d1-9197-445abe44fbc2" name="Changes" comment="" />
+    <list default="true" id="bb41b9af-08b0-49d1-9197-445abe44fbc2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/context.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/context.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/plugins/IndieWebRingPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/plugins/IndieWebRingPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/plugins/ScorePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/plugins/ScorePlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/run.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/run.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/templates/html.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/templates/html.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/minifyCss.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/minifyCss.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +54,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -65,9 +81,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/armando/Documents/github/web-libk"
+    "last_opened_file_path": "/home/armando/Documents/github/web",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/common" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/server" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/generate" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="common" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="common" />
+      <recent name="md" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="web-libk [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
