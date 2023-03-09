@@ -1,5 +1,6 @@
 package common
 
+import kotlinx.html.TagConsumer
 import kotlinx.html.stream.appendHTML
 import kotlinx.html.stream.createHTML
 import md.MarkdownSupport
@@ -33,24 +34,24 @@ public data class EnvContext(
     private val markdownSupport = MarkdownSupport(webPlugins)
 
     internal fun mdToHtml(inputMarkdown: String) = markdownSupport.mdToHtml(inputMarkdown)
-    internal fun Appendable.h() = appendHTML(prettyPrint = prettyPrint)
-    internal fun createH() = createHTML(prettyPrint = prettyPrint)
+    public fun Appendable.h(): TagConsumer<Appendable> = appendHTML(prettyPrint = prettyPrint)
+    public fun createH(): TagConsumer<String> = createHTML(prettyPrint = prettyPrint)
 }
 
-internal data class OutputContext(val resources: Resources)
+public data class OutputContext(val resources: Resources)
 
-internal data class LanguageContext(val language: Language) {
+public data class LanguageContext(val language: Language) {
     val t: LocalizedText = LocalizedText(language)
 }
 
 context(EnvContext, LanguageContext)
-internal class PageContext(
-    val fileName: String,
-    val pageOgType: String,
-    val titlesAndDescriptions: TitlesAndDescriptions,
-    val activePlugin: List<String> = emptyList()
+public class PageContext(
+    public val fileName: String,
+    public val pageOgType: String,
+    public val titlesAndDescriptions: TitlesAndDescriptions,
+    public  val activePlugin: List<String> = emptyList()
 ) {
-    val isIndex = fileName.split("/").last() == "index.html"
-    val path = if (isIndex) fileName.split("/").dropLast(1).joinToString("/")  else fileName
-    val pageUrl get() = domain + language.langPath + path
+    public val isIndex: Boolean = fileName.split("/").last() == "index.html"
+    public val path: String = if (isIndex) fileName.split("/").dropLast(1).joinToString("/")  else fileName
+    public val pageUrl: String get() = domain + language.langPath + path
 }

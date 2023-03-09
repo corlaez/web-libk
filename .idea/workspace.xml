@@ -7,11 +7,8 @@
     <list default="true" id="bb41b9af-08b0-49d1-9197-445abe44fbc2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/context.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/context.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/plugins/IndieWebRingPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/plugins/IndieWebRingPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/plugins/ScorePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/plugins/ScorePlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/run.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/run.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/templates/html.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/templates/html.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/minifyCss.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/minifyCss.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/model.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/plugins/MdPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/plugins/MdPlugin.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,12 @@
                 <item name="web-libk" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="web-libk" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -105,7 +108,7 @@
       <recent name="md" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.web-libk [publishToMavenLocal]">
     <configuration name="web-libk [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -127,8 +130,30 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="web-libk [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.web-libk [publishToMavenLocal]" />
         <item itemvalue="Gradle.web-libk [build]" />
       </list>
     </recent_temporary>

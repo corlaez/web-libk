@@ -1,6 +1,6 @@
 package common
 
-internal data class Resources(
+public data class Resources(
     val sytlesCss: String,
     val faviconTags: String,
     val manifestJson: String,// Google PWA

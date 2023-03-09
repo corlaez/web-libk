@@ -25,7 +25,7 @@ public open class MdPlugin(
                         "$pathNamespace$name.html",
                         pageOgType = "website",
                         notesIndexTitlesAndDescriptions(language))) {
-                        val resources = loadArticles("/${language}/$name")// No pathNamespace here
+                        val resources = loadArticles("/${language.locale}/$name")// No pathNamespace here
                         val resource = resources.first()
                         add(asHtmlPage("", mdToHtml(resource.unparsedContent)))
                     }
