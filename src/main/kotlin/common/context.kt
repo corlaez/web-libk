@@ -27,12 +27,12 @@ public data class EnvContext(
 ) {
     init {
         envText.apply {
-            ContantHelper.register("WEBSITE_NAME" to WEBSITE_NAME)
-            ContantHelper.register("EXTERNAL_RELS" to EXTERNAL_RELS)
-            LOGO_SQR_THEME_RGB?.let { ContantHelper.register("LOGO_SQR_THEME_RGB" to LOGO_SQR_THEME_RGB) }
-            LOGO_SQR_IMAGE_PATH?.let { ContantHelper.register("LOGO_SQR_IMAGE_PATH" to LOGO_SQR_IMAGE_PATH) }
-            TWITTER_HANDLE?.let { ContantHelper.register("TWITTER_HANDLE" to TWITTER_HANDLE) }
-            SERVICE_WORKER_JS_PATH?.let { ContantHelper.register("SERVICE_WORKER_JS_PATH" to SERVICE_WORKER_JS_PATH) }
+            WebVariables.register("WEBSITE_NAME" to WEBSITE_NAME)
+            WebVariables.register("EXTERNAL_RELS" to EXTERNAL_RELS)
+            LOGO_SQR_THEME_RGB?.let { WebVariables.register("LOGO_SQR_THEME_RGB" to LOGO_SQR_THEME_RGB) }
+            LOGO_SQR_IMAGE_PATH?.let { WebVariables.register("LOGO_SQR_IMAGE_PATH" to LOGO_SQR_IMAGE_PATH) }
+            TWITTER_HANDLE?.let { WebVariables.register("TWITTER_HANDLE" to TWITTER_HANDLE) }
+            SERVICE_WORKER_JS_PATH?.let { WebVariables.register("SERVICE_WORKER_JS_PATH" to SERVICE_WORKER_JS_PATH) }
         }
     }
 

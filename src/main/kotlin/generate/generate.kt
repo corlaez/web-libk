@@ -1,6 +1,6 @@
 package generate
 
-import common.ContantHelper.replaceTemplateConstants
+import common.WebVariables.replaceWebVariables
 import common.EnvContext
 import common.OutputContext
 import common.Page
@@ -15,10 +15,10 @@ private data class Output(
 context(EnvContext)
 internal fun generate() {
     val resources = Resources(
-        sytlesCss = loadAndMergeCss().replaceTemplateConstants(),
-        faviconTags = loadResourceAsString("/tags.txt").replace(">\n", ">").replaceTemplateConstants(),
-        manifestJson = loadResourceAsString("/manifest.json").replaceTemplateConstants(),
-        browserconfigXml = loadResourceAsString("/browserconfig.xml").replaceTemplateConstants(),
+        sytlesCss = loadAndMergeCss().replaceWebVariables(),
+        faviconTags = loadResourceAsString("/tags.txt").replace(">\n", ">").replaceWebVariables(),
+        manifestJson = loadResourceAsString("/manifest.json").replaceWebVariables(),
+        browserconfigXml = loadResourceAsString("/browserconfig.xml").replaceWebVariables(),
     )
     deleteDirectory("deploy/output")
     val output = with(OutputContext(resources)) {

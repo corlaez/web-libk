@@ -71,7 +71,6 @@ private fun HEADER.headerTags() {
 context(EnvContext, OutputContext, LanguageContext, PageContext)
 private fun HEAD.headTags() {
     meta { charset = "utf-8" }
-//    link { rel = "preload"; href = C.WINE_IMAGE_PATH; attributes += "as" to "image"; }
     link { rel = "canonical"; href = pageUrl }
     if (language != englishUnitedStatesLanguage) link {
         rel = "alternate"; hrefLang = englishUnitedStatesLanguage.locale.toString()

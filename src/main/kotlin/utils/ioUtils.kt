@@ -29,7 +29,7 @@ internal fun saveFile(content: String, folder: String?, name: String) {
 internal fun copyDirectory(name: String, target: String) = File(name).copyRecursively(File(target), true)
 
 internal fun deleteDirectory(name: String) = File(name).deleteRecursively()
-internal fun createDirectory(name: String) = File(name).mkdirs()
+public fun createDirectory(name: String): Boolean = File(name).mkdirs()
 
 internal fun saveFile(content: ByteArray, folder: String?, name: String) {
     if (folder != null) File(folder).mkdirs()

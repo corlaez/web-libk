@@ -19,8 +19,4 @@ public interface WebPlugin {
 
     context(EnvContext, LanguageContext, PageContext, NAV)
     public fun navTags() {}
-
-    public fun addTextReplacement(pair: Pair<String, String>) {
-        ContantHelper.register(pair)
-    }
 }
