@@ -40,6 +40,10 @@ kotlin {
     jvmToolchain(8)
 }
 
+java {
+    withSourcesJar()
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions.freeCompilerArgs += "-Xcontext-receivers"
 }

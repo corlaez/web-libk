@@ -25,6 +25,17 @@ public data class EnvContext(
     val languages: List<Language>,
     val webPlugins: List<WebPlugin>,
 ) {
+    init {
+        envText.apply {
+            ContantHelper.register("WEBSITE_NAME" to WEBSITE_NAME)
+            ContantHelper.register("EXTERNAL_RELS" to EXTERNAL_RELS)
+            LOGO_SQR_THEME_RGB?.let { ContantHelper.register("LOGO_SQR_THEME_RGB" to LOGO_SQR_THEME_RGB) }
+            LOGO_SQR_IMAGE_PATH?.let { ContantHelper.register("LOGO_SQR_IMAGE_PATH" to LOGO_SQR_IMAGE_PATH) }
+            TWITTER_HANDLE?.let { ContantHelper.register("TWITTER_HANDLE" to TWITTER_HANDLE) }
+            SERVICE_WORKER_JS_PATH?.let { ContantHelper.register("SERVICE_WORKER_JS_PATH" to SERVICE_WORKER_JS_PATH) }
+        }
+    }
+
     val domain: String = when(arg.isPrd()) {
         true -> productionDomain
         false -> "http://localhost:$port"

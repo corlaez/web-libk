@@ -11,7 +11,7 @@ public fun asHtmlPage(mainClasses: String, contentHtml: String): Page {
     val htmlPageString = buildString {
         append("<!DOCTYPE html>")
         h().html {
-            lang = language.toString()
+            lang = language.locale.toString()
             head { headTags() }
             body(classes = mainClasses) {
                 nav { navTags() }
@@ -33,20 +33,11 @@ public fun asHtmlPage(mainClasses: String, contentHtml: String): Page {
 context(EnvContext, LanguageContext, PageContext)
 private fun NAV.navTags() {
     webPlugins.forEach { it.navTags() }
-//    can be made into a plugin
-//    if (language != spanishPeruLanguage) {
-//        +" "
-//        a { href = "${spanishPeruLanguage.langPath}${path}"; +"Versión en Español" }
-//    }
-//    if (language != englishUnitedStatesLanguage) {
-//        +" "
-//        a { href = "${englishUnitedStatesLanguage.langPath}${path}"; +"English Version" }
-//    }
 }
 
 context(EnvContext, OutputContext, LanguageContext, PageContext)
 private fun HEADER.headerTags() {
-    div(classes = "header-banner") {// instead of fire
+    div(classes = "header-banner") {
         a(classes = "u-url") {
             href = pageUrl
             h1(classes = "p-name") {
@@ -138,7 +129,7 @@ private fun HEAD.headTags() {
     if (envText.SERVICE_WORKER_JS_PATH != null)
         script {
             unsafe { +"""if('serviceWorker' in navigator){
-            |navigator.serviceWorker.register("$envText.SERVICE_WORKER_JS_PATH")}""".trimMargin() }
+            |navigator.serviceWorker.register("${envText.SERVICE_WORKER_JS_PATH}")}""".trimMargin() }
         }
     webPlugins.forEach{ it.headTags() }
 }
