@@ -19,4 +19,7 @@ public interface WebPlugin {
 
     context(EnvContext, LanguageContext, PageContext, NAV)
     public fun navTags() {}
+
+    context(EnvContext, LanguageContext, PageContext, HEADER)
+    public fun headerTags() {}
 }

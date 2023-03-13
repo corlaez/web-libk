@@ -11,7 +11,7 @@ public data class Language(
 public val spanishPeruLanguage: Language = Language("/es/", "es_PE", Locale("es"))
 public val englishUnitedStatesLanguage: Language = Language("/", "en_US", Locale.ENGLISH)
 
-internal fun throwUnsupportedLanguage(): Nothing {
+public fun throwUnsupportedLanguage(): Nothing {
     error("Unsupported Language")
 }
 

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb41b9af-08b0-49d1-9197-445abe44fbc2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/common/Variables.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/C.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/WebPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/WebPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/context.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/context.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/generate/generate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/generate/generate.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/common/i18n.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/common/i18n.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/plugins/MermaidPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/plugins/MermaidPlugin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/templates/html.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/templates/html.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/ioUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ioUtils.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

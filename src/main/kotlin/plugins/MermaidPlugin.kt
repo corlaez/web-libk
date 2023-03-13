@@ -25,12 +25,15 @@ public class MermaidPlugin(override val enabled: Boolean = true) : WebPlugin {
     context(EnvContext, OutputContext, LanguageContext, PageContext, FOOTER)
     override fun footerTags() {
         if(activePlugin.contains(activePluginName)) {
-            this@FOOTER.script { +(
-                    "window.onload=function(){" +
-                            "mermaid.initialize({" +
-                            "'theme':'dark','background':'#111111'" +
-                            "});" +
-                            "};")
+            this@FOOTER.script {
+                unsafe { +(
+                        "window.onload=function(){" +
+                                "mermaid.initialize({" +
+                                "'theme':'dark','background':'#111111'" +
+                                "});" +
+                                "};"
+                        )
+                }
             }
             this@FOOTER.script { defer = true; src ="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" }
         }

@@ -47,25 +47,7 @@ private fun HEADER.headerTags() {
         if (titlesAndDescriptions.visibleDescription.isNotBlank())
             p { +titlesAndDescriptions.visibleDescription }
     }
-    div(classes = "center") {
-        // TODO: websocket?
-//        audio {
-//            attributes += "preload" to "none"
-//            controls = true
-//            loop = true
-//            source {
-//                src = C.BEC_AUDIO
-//                type = C.BEC_AUDIO_TYPE
-//            }
-//        }
-        noScript { p { +(when(language) {
-            englishUnitedStatesLanguage -> "Hey you, browsing with JavaScript off. You are welcomed! " +
-                    "This page does not require JS to work properly :)"
-            spanishPeruLanguage -> "Hey tu, navegando con JavaScript deshabilitado. Bienvenido! " +
-                    "Esta página no requiere JS para funcionar de manera apropiada :)"
-            else -> throwUnsupportedLanguage()
-        }) } }
-    }
+    webPlugins.forEach { it.headerTags() }
 }
 
 context(EnvContext, OutputContext, LanguageContext, PageContext)
@@ -132,38 +114,3 @@ private fun HEAD.headTags() {
         }
     webPlugins.forEach{ it.headTags() }
 }
-
-//context(EnvContext, OutputContext, LanguageContext, PageContext)
-//private fun FOOTER.hCard() {
-//    // Based on http://microformats.org/wiki/representative-h-card-authoring
-//    div(classes = "h-card p-author")  {
-//        p(classes = "center signature") {
-//            img(classes = "u-photo") {
-//                alt = t.logoAlly
-//                attributes += "loading" to "lazy"
-//                src = C.SIGNATURE2_IMAGE_PATH
-//                width = C.SIGNATURE2_IMAGE_W
-//                height = C.SIGNATURE2_IMAGE_H
-//            }
-//        }
-//        p {
-//            a(classes = "u-url u-uid") {
-//                href = "https://corlaez.com"
-//                +"corlaez.com"
-//            }
-//            +t.messageBetweenWebsiteAndName
-//            span(classes = "p-name") {
-//                +C.OWNER_NAME
-//            }
-//            +". "
-//            +t.thanksForYourVisit
-//        }
-//        p(classes = "center") {
-//            a(classes = "u-url") {href = "https://github.com/corlaez";rel = "me authn ${C.EXTERNAL_RELS}"; +"Github";  }
-//            +" "
-//            a(classes = "u-url")  {href = "https://linkedin.com/in/corlaez";rel = "me ${C.EXTERNAL_RELS}"; +"LinkedIn" }
-//            +" "
-//            a(classes = "u-url")  {href = "https://twitter.com/corlaez";rel = "me ${C.EXTERNAL_RELS}"; +"Twitter" }
-//        }
-//    }
-//}
