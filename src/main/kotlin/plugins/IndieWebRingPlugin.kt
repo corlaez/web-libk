@@ -12,7 +12,7 @@ public class IndieWebRingPlugin(override val enabled: Boolean = true) : WebPlugi
     override fun footerTags() {
         this@FOOTER.p(classes = "center") {
             a(classes = "u-url") {
-                href = "https://xn--sr8hvo.ws/%F0%9F%94%AE%F0%9F%90%9C%F0%9F%9A%87/previous"
+                href = "https://xn--sr8hvo.ws/previous"
                 rel = envText.EXTERNAL_RELS
                 +"←"
             }
@@ -24,7 +24,7 @@ public class IndieWebRingPlugin(override val enabled: Boolean = true) : WebPlugi
             }
             +" \uD83D\uDD78\uD83D\uDC8D "
             a(classes = "u-url")  {
-                href = "https://xn--sr8hvo.ws/%F0%9F%94%AE%F0%9F%90%9C%F0%9F%9A%87/next"
+                href = "https://xn--sr8hvo.ws/next"
                 rel = envText.EXTERNAL_RELS
                 +"→"
             }
