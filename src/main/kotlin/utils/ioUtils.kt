@@ -7,10 +7,13 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.stream.*
 
-internal fun getUri(name: String): URI {
-    val url = "".javaClass.getResource(name)
-    return url!!.toURI()
-}
+// Check https://stackoverflow.com/questions/10247161/when-to-use-getresourceasstream-method/10247343#10247343
+internal fun getUri(name: String): URI =
+    "".javaClass.getResource(name)?.toURI() ?:
+    listOf("main", "test").map { File("src/$it/resources$name") }
+        .firstOrNull() { it.isFile || it.isDirectory }
+        ?.toURI()?: error("File $name not found")
+
 internal fun listFilenamesInDirectory(name: String): List<String> {
     val dirPath = Paths.get(getUri(name))
     val paths = Files.list(dirPath)
@@ -18,7 +21,15 @@ internal fun listFilenamesInDirectory(name: String): List<String> {
         .map { p -> p.fileName.toString() }
         .collect(Collectors.toList())
 }
-internal fun loadResourceAsBytes(name: String) = "".javaClass.getResourceAsStream(name)!!.readBytes()
+
+// Check https://stackoverflow.com/questions/10247161/when-to-use-getresourceasstream-method/10247343#10247343
+internal fun loadResourceAsBytes(name: String) =
+    // From Jar
+    "".javaClass.getResourceAsStream(name)?.readBytes() ?:
+    // from Filesystem
+    runCatching { FileInputStream("src/main/resources$name").readBytes() }
+        .getOrElse { FileInputStream("src/test/resources$name").readBytes() }
+        
 internal fun loadResourceAsString(name: String, charset: Charset = Charset.forName("UTF-8")) =
     String(loadResourceAsBytes(name), charset)
 
